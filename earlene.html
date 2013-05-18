@@ -5,6 +5,7 @@
  		
  		<title>PLEA app</title>
 
+ 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="./assets/css/app.css">
 
@@ -27,15 +28,37 @@
 		</nav>
 
 		<div class="content">
-			<div class="students-charts">
+			<article class="students-charts">
+				<h4>Earlene's Charts</h4>
+				<button id="newchart" class="bttn blue">New Chart</button>
 				<ul class="student-chart-list earlene-beahan">
-					<li><a href="#">letters - hear/point</a></li>
-					<li><a href="#">phonemes - hear/say</a></li>
-					<li><a href="#">drawing letters - hear/point</a></li>
-					<li><a href="#">sentences - hear/mark</a></li>
-					<li><a href="#">hand motions - free/point</a></li>
+					<li><a href="#">letters - hear/point</a> 
+						<span class="last-opened">Last opened: 
+							<span class="date">Yesterday</span>
+						</span>
+					</li>
+					<li><a href="#">phonemes - hear/say</a>
+						<span class="last-opened">Last opened: 
+							<span class="date">Yesterday</span>
+						</span>
+					</li>
+					<li><a href="#">drawing letters - hear/point</a>
+						<span class="last-opened">Last opened: 
+							<span class="date">3 days ago</span>
+						</span>
+					</li>
+					<li><a href="#">sentences - hear/mark</a>
+						<span class="last-opened">Last opened: 
+							<span class="date">4 days ago</span>
+						</span>
+					</li>
+					<li><a href="#">hand motions - free/point</a>
+						<span class="last-opened">Last opened: 
+							<span class="date">A few weeks ago</span>
+						</span>
+					</li>
 				</ul> 
-			</div>
+			</article>
 		</div>
 
 		<script type="text/javascript" src="./assets/js/push.js"></script>
