@@ -138,17 +138,18 @@ body {
  * ====================================================================== */
 
 .bar-title {
-    border-bottom: 0.1em solid .content {    background: rgb(255, 253, 247);    padding-bottom: 3em;};
     padding: 0.66em;
     background-color: rgb(87, 64, 64);
     color: rgb(173, 160, 158);
     border-bottom: 0.17em solid #262121;
     font-weight: lighter;
+    position: fixed;
+    width: 100%;
 }
 
 .bar-title span {
     display: block;
-    width: 100%;
+    width: 97%;
 }
 .user {
     text-align: left;
@@ -164,19 +165,25 @@ body {
  * ====================================================================== */
 
 .menu {
-    background: #495682;
     position: fixed;
+}
+
+.menu, .new-item-form h4 {
+    background: #495682;
 }
 
 .menu h3 {
     color: rgb(71, 80, 111);
-    font-size: 0.8em;
     padding: 0.33em 0.5em;
     margin: 0;
-    font-weight: bold;
     background: rgb(156, 169, 213);
     text-transform: uppercase;
     letter-spacing: 0.75px;
+}
+
+.menu h3, .new-item-form h4 {
+    font-size: 0.8em;
+    font-weight: bold;
 }
 
 .menu a {
@@ -188,11 +195,11 @@ body {
 }
 
 .menu a:hover {
-    background: #258ecd;
+    background: rgb(92, 124, 228);
 }
 
 .menu .current:hover {
-    background: #afdefa;
+    background: #5c71b5;
 }
 
 /* Add a triangle to currently open menu item link */
@@ -281,6 +288,8 @@ body {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    position: fixed;
+    top: 2.55em;
 }
 
 
@@ -292,15 +301,88 @@ body {
     width: 24%;
     margin-left: 2%;
     position: fixed;
+    right: 0;
     background: #a3d268;
     height: 46.6em;
+}
+
+.new-item-form form, .new-item-form h5 {
     padding: 0.66em 1.66em;
 }
 
+.new-item-form h5 {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 1em 0 0.5em 0;
+    text-align: center;
+    font-style: italic;
+    padding-right: 1.5em;
+}
+
+.new-item-form h4 {
+    padding: 1.15em;
+    color: #fff;
+    margin: 0;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.radio-choice-list li {
+    list-style-type: none;
+}
+.radio-choice-list {
+    margin: 0;
+    padding: 0;
+}
+.radio-choice-list label {
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.36);
+    border-radius: 0.25em;
+    display: block;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.new-item-form a {
+    text-decoration: none;
+}
+
+.radio-choice-list input[type=radio] {
+    display: none;
+}
+.new-item-form .back, .new-item-form .cancel {
+    position: fixed;
+    top: 3.8em;
+}
+.new-item-form .back {
+    margin-left: 0.75%;
+}
+.new-item-form .cancel {
+    right: 0.66em;
+}
+
+.review-form {
+    padding: 0 1em;
+}
+.review-form p {
+    font-size: em;
+}
+.review-form .bttn.confirm {
+    width: 88%;
+    margin: 0 auto;
+    font-size: 1em;
+    padding: 0.5em;
+    text-align: center;
+    border-radius: 0.25em;
+}
+
+/* General Chart-selection UI Styles
+ * ====================================================================== */
 
 .content {
     background: rgb(255, 254, 252);
     padding-bottom: 3em;
+    padding-top: 2.5em;
 }
 
 .content article h4 {
@@ -360,7 +442,25 @@ body {
 } 
 
 
-
+/* Behavior Scatterplot Table Styles
+ * ====================================================================== */
+.behavior-scatterplot-page {
+    padding-top: 0.5em;
+}
+.behavior-scatterplot-page h1 {
+    width: 50%;
+    float: left;
+    margin-left: 0.5em;
+    background-color: #495682;
+    padding: 0.53em;
+    color: white;
+}
+.behavior-scatterplot-page h1 a {
+    color: white;
+}
+.behaviors.table {
+    margin-top: 6em;
+}
 .table tr {
     border: 1px solid rgb(233, 233, 233);
 }
@@ -415,13 +515,14 @@ tr.today th.today-indicator {
 .boc {
     width: 50%;
     float: left;
+    margin: 0;
 }
 .key {
     display: inline-block;
     float: right;
     border: 1px solid black;
     padding: 0em 1em 0em 1em;
-    margin: 1em;
+    margin: 0 0.5em 0 0;
     background-color: white;
     border: 0.1em solid rgb(187, 187, 187);
 }
@@ -466,3 +567,6 @@ td .l, dt.l {
 td .hs, dt.hs {
     background-color: #63a1e5;
 }
+
+
+
