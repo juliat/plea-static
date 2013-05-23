@@ -18,7 +18,21 @@ function hideAddressBar()
 $(document).ready(function() {
     // bind logger labels
     $('.logger .label').fastClick(function(e) { 
-            $(this).toggleClass('active');
+            var el = $(this);
+            if (el.hasClass('tally')) {
+                var count = el.find('.count');
+                if ((count.text() === '') || (count.text() === '0')) {
+                    count.text('1');
+                    el.toggleClass('active');
+                }
+                else {
+                    var newCount = parseInt(count.text())+1;
+                    count.text(newCount + '');
+                }
+            }
+            else {
+                el.toggleClass('active');
+            }
     });
 
 

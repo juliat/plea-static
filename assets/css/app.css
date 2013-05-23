@@ -577,6 +577,9 @@ td .hs, dt.hs, .logger .label.active.hs{
 }
 
 
+.table tr .current-time-slot {
+    border: 3px solid #333;
+}
 .logger {
     clear: both;
     margin-left: 1em;
