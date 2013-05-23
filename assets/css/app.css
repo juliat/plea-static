@@ -334,7 +334,7 @@ body {
     margin: 0;
     padding: 0;
 }
-.radio-choice-list label, .logger form label {
+.radio-choice-list label, .logger form .label {
     padding: 1em;
     border-radius: 0.25em;
     display: block;
@@ -566,13 +566,13 @@ dd.l {
 dd.hs {
     color: #63a1e5;
 }
-td .p, dt.p, .logger label.active.p, .logger label.p:hover {
+td .p, dt.p, .logger .label.active.p {
     background-color: #668f2c;
 }
-td .l, dt.l, .logger label.active.l, .logger label.l:hover {
+td .l, dt.l, .logger .label.active.l {
     background-color: #f34345;
 }
-td .hs, dt.hs, .logger label.active.hs, .logger label.hs:hover {
+td .hs, dt.hs, .logger .label.active.hs{
     background-color: #63a1e5;
 }
 
@@ -588,24 +588,25 @@ td .hs, dt.hs, .logger label.active.hs, .logger label.hs:hover {
 .logger input[type=number] {
     display: none;
 }
-.logger form label {
+.logger form .label {
     color: #ccc;
     background-color: rgba(255, 255, 255, 0.44);
 }
-.logger label.active {
+.logger .label.active {
     color: #eee;
 }
-.logger label:hover {
+/*
+.logger .label:hover {
     color: white;
     opacity: 0.75;
-}
+} */
 
 .time-indicator {
     display: inline-block;
     font-size: 1.66em;
     float: left;
 }
-.logger form, .logger form div {
+.logger form, .logger form > div {
     display: inline-block;
     float: left;
 }
@@ -618,10 +619,10 @@ td .hs, dt.hs, .logger label.active.hs, .logger label.hs:hover {
     margin: 0;
     text-align: center;
 }
-.time-indicator, .logger form div {
+.time-indicator, .logger form > div {
     margin-right: 1.25em;
 }
 
-.behavior-scatterplot-page .logger form label {
+.behavior-scatterplot-page .logger form .label {
     padding: 1em 4em;
 }
