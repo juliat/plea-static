@@ -17,7 +17,8 @@ function hideAddressBar()
 
 $(document).ready(function() {
     // bind logger labels
-    $('.logger label').bind('click', function(){
+    $('.logger label').on('touchend', function(){
+            console.log('touch');
             $(this).toggleClass('active');
     });
 
