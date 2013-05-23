@@ -14,5 +14,14 @@ function hideAddressBar()
         }
     }
 }
-window.addEventListener("load", hideAddressBar );
-window.addEventListener("orientationchange", hideAddressBar );
+
+$(document).ready(function() {
+    // bind logger labels
+    $('.logger label').bind('click', function(){
+            $(this).toggleClass('active');
+    });
+
+    // bind address bar stuff
+    window.addEventListener("load", hideAddressBar );
+    window.addEventListener("orientationchange", hideAddressBar );
+});

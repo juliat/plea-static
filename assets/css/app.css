@@ -334,11 +334,13 @@ body {
     margin: 0;
     padding: 0;
 }
-.radio-choice-list label {
+.radio-choice-list label, .logger form label {
     padding: 1em;
-    background-color: rgba(255, 255, 255, 0.36);
     border-radius: 0.25em;
     display: block;
+    background-color: rgba(255, 255, 255, 0.36);
+}
+.radio-choice-list label {
     margin-bottom: 0.5em;
     color: #333;
 }
@@ -347,7 +349,7 @@ body {
     text-decoration: none;
 }
 
-.radio-choice-list input[type=radio] {
+.radio-choice-list input[type=radio], .logger input[type=checkbox] {
     display: none;
 }
 .new-item-form .back, .new-item-form .cancel {
@@ -442,7 +444,7 @@ body {
 } 
 
 
-/* Behavior Scatterplot Table Styles
+/* Behavior Scatterplot Styles
  * ====================================================================== */
 .behavior-scatterplot-page {
     padding-top: 0.5em;
@@ -459,7 +461,7 @@ body {
     color: white;
 }
 .behaviors.table {
-    margin-top: 6em;
+    margin-top: 0.66em;
 }
 .table tr {
     border: 1px solid rgb(233, 233, 233);
@@ -511,6 +513,8 @@ tr.today th {
 }
 tr.today th.today-indicator {
     border: 1px solid rgb(213, 213, 213);
+    background-color: #333;
+    color: #eee;
 }
 .boc {
     width: 50%;
@@ -522,7 +526,7 @@ tr.today th.today-indicator {
     float: right;
     border: 1px solid black;
     padding: 0em 1em 0em 1em;
-    margin: 0 0.5em 0 0;
+    margin: 0 0.5em 0.75em 0;
     background-color: white;
     border: 0.1em solid rgb(187, 187, 187);
 }
@@ -534,6 +538,10 @@ tr.today th.today-indicator {
 }
 .key dl {
     margin-top: 0.5em;
+}
+
+.key p {
+    font-size: 0.75em;
 }
 dl dt, dl dd {
     display: inline-block;
@@ -558,15 +566,62 @@ dd.l {
 dd.hs {
     color: #63a1e5;
 }
-td .p, dt.p {
+td .p, dt.p, .logger label.active.p, .logger label.p:hover {
     background-color: #668f2c;
 }
-td .l, dt.l {
+td .l, dt.l, .logger label.active.l, .logger label.l:hover {
     background-color: #f34345;
 }
-td .hs, dt.hs {
+td .hs, dt.hs, .logger label.active.hs, .logger label.hs:hover {
     background-color: #63a1e5;
 }
 
 
+.logger {
+    clear: both;
+    margin-left: 1em;
+    margin-right: 0.5em;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5em;
+}
+.logger input[type=number] {
+    display: none;
+}
+.logger form label {
+    color: #ccc;
+    background-color: rgba(255, 255, 255, 0.44);
+}
+.logger label.active {
+    color: #eee;
+}
+.logger label:hover {
+    color: white;
+    opacity: 0.75;
+}
 
+.time-indicator {
+    display: inline-block;
+    font-size: 1.66em;
+    float: left;
+}
+.logger form, .logger form div {
+    display: inline-block;
+    float: left;
+}
+.time-indicator span {
+    display: block;
+    font-size: 0.4em;
+}
+.time-indicator p {
+    padding: 0.12em 0.25em 0 0.25em;
+    margin: 0;
+    text-align: center;
+}
+.time-indicator, .logger form div {
+    margin-right: 1.25em;
+}
+
+.behavior-scatterplot-page .logger form label {
+    padding: 1em 4em;
+}

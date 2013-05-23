@@ -9,9 +9,10 @@
 		<link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="./assets/css/app.css">
 		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>	
+		
 		<script type="text/javascript" src="./assets/js/app.js"></script>
-
-		<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> -->
+	
 		<!-- <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css"> -->
 
 		<!--Stops double tap from zooming and lets multitouch gestures work -->
@@ -35,6 +36,30 @@
 					<dd class="l">Language</dd>
 				</dl>
 				<p>Tap on a behavior above to show or hide it on the scatterplot.</p>
+			</section>
+			<script>
+			$('.logger label').bind('click', function(){
+			        $(this).toggleClass('active');
+			});
+			</script>
+			<section class="logger cf">
+				<div class="time-indicator">
+					<p><span>Current time slot:</span> 9:30</p>
+				</div>
+				<form>
+					<div>
+						<label for="b1" class="p active">Pinch</label>
+						<input type="checkbox" name="b1" value="1"></input>
+					</div>
+					<div>
+						<label for="b2" class="hs">Happy Slap</label>
+						<input type="checkbox" name="b2" value="1"></input>
+					</div>
+					<div class="tally">
+						<label for="b3" class="l">Language</label>
+						<input type="number" name="b3"></input
+					</div>
+				</form>
 			</section>
 			<table class="behaviors table">
 				<thead>
@@ -953,7 +978,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<!-- <script type="text/javascript" src="./assets/js/bootstrap.js"></script> -->
+			<!-- <script type="text/javascript" src="./assets/js/bootstrap.js"></script>-->
 		</div>
 	</body>
 </html>
