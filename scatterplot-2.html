@@ -40,26 +40,21 @@
 				</dl>
 				<p>Tap on a behavior above to show or hide it on the scatterplot.</p>
 			</section>
-			<script>
-			$('.logger label').bind('click', function(){
-			        $(this).toggleClass('active');
-			});
-			</script>
 			<section class="logger cf">
 				<div class="time-indicator">
 					<p><span>Current time slot:</span> 8:30</p>
 				</div>
 				<form>
 					<div>
-						<div class="label p active">Pinch</div>
+						<label for="b1" class="label p active">Pinch</label>
 						<input type="checkbox" name="b1" value="1"></input>
 					</div>
 					<div>
-						<div class="label hs">Happy Slap</div>
+						<label for="b2" class="label hs">Happy Slap</label>
 						<input type="checkbox" name="b2" value="1"></input>
 					</div>
 					<div class="tally">
-						<div class="label l">Language</div>
+						<label for="b3" class="label l">Language</label>
 						<input type="number" name="b3"></input
 					</div>
 				</form>

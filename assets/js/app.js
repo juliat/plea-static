@@ -17,13 +17,8 @@ function hideAddressBar()
 
 $(document).ready(function() {
     // bind logger labels
-    /*$('.logger .label').on('click', function(e){ */
     $('.logger .label').fastClick(function(e) { 
-            // alert('fast clicked!');
-            // e.preventDefault();
-            // console.log('touch');
             $(this).toggleClass('active');
-            // return false;
     });
 
 
